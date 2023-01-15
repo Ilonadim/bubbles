@@ -16,13 +16,20 @@ function printAndGetHighScore(scores) {
     }
     return highscore;
 }
+
+function getBestResults(scores, highScore) {
+    var bestSolutions = [];
+    for (var i = 0; i < scores.length; i++) {
+        if (sores[i] == highScore) {
+            bestSolutions.push(i);
+        }
+    }
+    return bestSolutions;
+}
 var highScore = printAndGetHighScore(scores);
 console.log("Bubbles tests:" + scores.length);
 consle.log("Highest bubble score: " + highScore);
 var bestSolutions = [];
-for (var i = 0; i < scores.length; i++) {
-    if (scores[i] == highScore) {
-        bestSolutions.push(i);
-    }
-}
+
+var bestSolutions = getBestResults(scores, highScore);
 console.log("Solutions with the highrst score: " + bestSolutions);
