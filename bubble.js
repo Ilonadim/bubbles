@@ -4,15 +4,19 @@
     69, 64, 66, 55, 52, 61,
     46, 31, 57, 52, 44, 18,
     41, 53, 55, 61, 51, 44];
-var highScore = 0;
-var output;
-for (var i = 0; i < scores.length; i++) {
-    output = "Bubblesolution #" + i + " score: " + scores[i];
-    console.log(output);
-    if (scores[i] > highScore) {
-        highScore = scores[i];
+function printAndGetHighScore(scores) {
+    var highScore = 0;
+    var output;
+    for (var i = 0; i < scores.length; i++) {
+        output = "Bbuble solution #" + i + "score: " + scores[i];
+        console.log(output);
+        if (scores[i] > highScore) {
+            highScore = scores[i];
+        }
     }
+    return highscore;
 }
+var highScore = printAndGetHighScore(scores);
 console.log("Bubbles tests:" + scores.length);
 consle.log("Highest bubble score: " + highScore);
 var bestSolutions = [];
